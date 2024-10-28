@@ -33,7 +33,7 @@ public class MainListenerService {
 
     }
 
-    public void workWithCommand(Long userChatId, String messageText) {
-
+    public void workWithButton(Update update) {
+        workWithText(update.callbackQuery().data(), update);
     }
 }

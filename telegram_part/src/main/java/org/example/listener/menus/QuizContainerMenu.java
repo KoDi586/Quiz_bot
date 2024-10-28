@@ -10,14 +10,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class MainMenu {
+public class QuizContainerMenu {
+
     private final TelegramBot telegramBot;
 
     public void sendMessage(long chatId) {
-        InlineKeyboardButton button0 = new InlineKeyboardButton("Выбрать тему викторины").callbackData("/chooseQuiz");
-        InlineKeyboardButton button2 = new InlineKeyboardButton("второй пункт").callbackData("/second");
-        InlineKeyboardButton button1 = new InlineKeyboardButton("помощь").callbackData("/help");
-        InlineKeyboardButton button3 = new InlineKeyboardButton("поддержать проект").callbackData("/donat");
+        InlineKeyboardButton button0 = new InlineKeyboardButton("тема 1").callbackData("/null");
+        InlineKeyboardButton button2 = new InlineKeyboardButton("тема 2").callbackData("/null");
+        InlineKeyboardButton button1 = new InlineKeyboardButton("тема 3").callbackData("/null");
+        InlineKeyboardButton button3 = new InlineKeyboardButton("назад").callbackData("/backInMainMenu");
 
 
 
@@ -28,7 +29,7 @@ public class MainMenu {
 
         telegramBot.execute(
                 new SendMessage(chatId,
-                        "Main menu:")
+                        "Quiz topics:")
                         .replyMarkup(keyboard1));
 
 
