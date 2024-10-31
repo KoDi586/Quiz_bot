@@ -5,7 +5,7 @@ import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.SendMessage;
 import lombok.RequiredArgsConstructor;
 import org.example.command.Command;
-import org.example.sevrice.quizService.QuizCreaterService;
+import org.example.sevrice.quizService.QuizCreatorService;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,7 +14,7 @@ public class SecondButton implements Command {
 
     public static String commandName = "/second";
     private final TelegramBot telegramBot;
-    private final QuizCreaterService service;
+    private final QuizCreatorService service;
 
     @Override
     public void execute(Update update) {
