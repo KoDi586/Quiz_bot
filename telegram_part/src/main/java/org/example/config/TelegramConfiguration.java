@@ -20,4 +20,6 @@ public class TelegramConfiguration {
         bot.execute(new DeleteMyCommands());
         return bot;
     }
+
+
 }
