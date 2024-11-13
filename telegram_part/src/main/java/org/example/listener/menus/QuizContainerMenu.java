@@ -15,7 +15,7 @@ public class QuizContainerMenu {
     private final TelegramBot telegramBot;
 
     public void sendMessage(long chatId) {
-        InlineKeyboardButton button0 = new InlineKeyboardButton("тема 1").callbackData("/firstQuizClick");
+        InlineKeyboardButton button0 = new InlineKeyboardButton("тема 1").callbackData("/firstThemeClick");
         InlineKeyboardButton button2 = new InlineKeyboardButton("тема 2").callbackData("/null");
         InlineKeyboardButton button1 = new InlineKeyboardButton("еще темы").callbackData("/null");
         InlineKeyboardButton button3 = new InlineKeyboardButton("назад").callbackData("/backInMainMenu");
