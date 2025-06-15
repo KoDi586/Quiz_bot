@@ -28,6 +28,8 @@ public class MainListenerService {
         if (text.startsWith(prefix)) {
             commandContainer.process(text, update);
         } else {
+            // здесь по идее может быть логика связанная с тем что пользователь хочет ввести
+            // например если он в сессии когда бот требует чтото от пользователя.
             dontUnderstand(update.message().chat().id());
         }
 
